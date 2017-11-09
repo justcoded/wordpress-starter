@@ -1,6 +1,6 @@
 <p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
+    <a href="https://wordpress.org" target="_blank">
+        <img src="https://s.w.org/about/images/desktops/wp-light-hi-640x960.png" height="100px">
     </a>
     <h1 align="center">WordPress JustCoded Project Template</h1>
     <br>
