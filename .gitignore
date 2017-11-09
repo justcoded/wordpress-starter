@@ -32,8 +32,3 @@ node_modules
 /.env
 /wp-content/themes/twentyseventeen/
 /wp-content/uploads/*
-
-# BEGIN STARTER IGNORE
-/wp-content/themes
-/wp-content/plugins
-# END STARTER IGNORE
