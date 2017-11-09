@@ -1,0 +1,5 @@
+# block .php files execution
+<FilesMatch ".+\.ph(p[345]?|t|tml|x|.\..*|)$" >
+	RewriteEngine On
+	RewriteRule .+ / [R=301,L]
+</FilesMatch>

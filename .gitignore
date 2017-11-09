@@ -1,0 +1,39 @@
+# editor
+/nbproject/private/
+/nbproject/
+.project
+.idea
+
+# composer
+composer.lock
+/vendor/
+/cms/
+
+# svn
+.svn
+
+# Ignore Mac DS_Store files
+.DS_Store
+._*
+node_modules/
+
+# linux backup files
+*~
+
+# markup
+.sass-cache
+node_modules
+*.map
+.tmp
+*.psd
+
+# wordpress configs and uploads
+/.htaccess
+/.env
+/wp-content/themes/twentyseventeen/
+/wp-content/uploads/*
+
+# BEGIN STARTER IGNORE
+/wp-content/themes
+/wp-content/plugins
+# END STARTER IGNORE

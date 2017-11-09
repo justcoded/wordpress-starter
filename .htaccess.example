@@ -1,0 +1,64 @@
+# fonts declaration
+AddType x-font/otf .otf
+AddType x-font/ttf .ttf
+AddType x-font/eot .eot
+AddType x-font/woff .woff
+AddType image/x-icon .ico
+
+# compress text, html, javascript, css, xml:
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/x-javascript
+	AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+#Browser cache
+<IfModule mod_expires.c>
+    <FilesMatch "\.(jpe?g|png|gif|js|css|ttf|svg|woff?2)$">
+        ExpiresActive On
+        ExpiresDefault "access plus 7 days"
+    </FilesMatch>
+    ExpiresByType text/javascript "access plus 7 days"
+    ExpiresByType application/x-javascript "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType text/javascript "access plus 7 days"
+    ExpiresByType text/js "access plus 7 days"
+</IfModule>
+
+#Security
+<IfModule mod_rewrite.c>
+	Options All -Indexes
+	<Files .htaccess>
+		order allow,deny
+		allow from all
+	</Files>
+	<files wp-config.php>
+		order allow,deny
+		deny from all
+	</files>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# WP REWRITE BASE
+RewriteBase /
+
+RewriteRule .git.* / [R=301,L]
+
+# WP ADMIN REWRITE
+RewriteRule ^cms\/?$ /cms/wp-admin/ [R=301,L]
+
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# WP INDEX REWRITE
+RewriteRule . /index.php [L]
+</IfModule>
+
