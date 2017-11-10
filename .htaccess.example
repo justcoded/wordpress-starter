@@ -47,18 +47,15 @@ AddType image/x-icon .ico
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-# WP REWRITE BASE
 RewriteBase /
 
 RewriteRule .git.* / [R=301,L]
 
-# WP ADMIN REWRITE
 RewriteRule ^cms\/?$ /cms/wp-admin/ [R=301,L]
 
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# WP INDEX REWRITE
 RewriteRule . /index.php [L]
 </IfModule>
 
