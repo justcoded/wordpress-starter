@@ -93,7 +93,7 @@
 		"wp:postInstall": "JustCoded\\WP\\Composer\\Environment::post_install",
 		"wp:dbPrefix": "JustCoded\\WP\\Composer\\Environment::wpdb_prefix",
 		"wp:salts" :  "JustCoded\\WP\\Composer\\Environment::salts",
-		"wp:theme" : "JustCoded\\WP\\Composer\\Environment::theme",
+		"wp:theme" : "JustCoded\\WP\\Composer\\Boilerplates::theme",
 
 		"post-create-project-cmd": [
 			"@wp:postInstall",
