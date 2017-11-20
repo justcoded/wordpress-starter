@@ -95,7 +95,7 @@
 		"wp:salts" :  "JustCoded\\WP\\Composer\\Environment::salts",
 		"wp:theme" : "JustCoded\\WP\\Composer\\Environment::theme",
 
-		"post-root-package-install": [
+		"post-create-project-cmd": [
 			"@wp:postInstall",
 			"@wp:dbPrefix",
 			"@wp:salts"
