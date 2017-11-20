@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Include composer autoload for 3d-party libraries
+ */
+require( __DIR__ . '/vendor/autoload.php' );
+
 $root_dir = dirname( __FILE__ );
 
 require $root_dir . '/environments/dotenv.php';

@@ -33,18 +33,18 @@
 			"type": "vcs",
 			"url": "https://github.com/justcoded/phpcodesniffer.git"
 		},
-    {
-      "type": "vcs",
-      "url": "https://github.com/justcoded/wordpress-composer-scripts.git"
-    }
+		{
+			"type": "vcs",
+			"url": "https://github.com/justcoded/wordpress-composer-scripts.git"
+		}
 	],
 	"require": {
 		"php": ">=7.0",
 		"composer/installers": "^1.4",
 		"vlucas/phpdotenv": "^2.0.1",
 
-		"johnpbloch/wordpress": "4.8.3",
-    "justcoded/wordpress-composer-scripts": "dev-master",
+		"johnpbloch/wordpress": "4.9",
+		"justcoded/wordpress-composer-scripts": "dev-master",
 
 		"wpackagist-theme/twentyseventeen": "*",
 		"wpackagist-plugin/wordpress-importer": "*",
@@ -85,23 +85,27 @@
 		}
 	},
 	"scripts": {
-    "wp:postInstall": "JustCoded\\WordPress\\Composer\\Environment::post_install",
-    "wp:dbPrefix": "JustCoded\\WordPress\\Composer\\Environment::wpdb_prefix",
-    "wp:salts" :  "JustCoded\\WordPress\\Composer\\Environment::salts",
+		"wp:postInstall": "JustCoded\\WordPress\\Composer\\Environment::post_install",
+		"wp:dbPrefix": "JustCoded\\WordPress\\Composer\\Environment::wpdb_prefix",
+		"wp:salts" :  "JustCoded\\WordPress\\Composer\\Environment::salts",
+		"wp:theme" : "JustCoded\\WordPress\\Composer\\Environment::theme",
+		"wp:secure" : "JustCoded\\WordPress\\Composer\\Environment::secure",
 
-    "post-root-package-install": [
-      "@wp:postInstall",
-      "@wp:dbPrefix",
-      "@wp:salts"
-    ],
-    "post-install-cmd": [
-      "@wp:postInstall"
-    ],
-    "post-update-cmd": [
-      "@wp:postInstall"
-    ],
-    "phpcs": [
-      "vendor/bin/phpcsx --standard=JustcodedWordpress"
-    ]
+		"post-root-package-install": [
+			"@wp:postInstall",
+			"@wp:dbPrefix",
+			"@wp:salts",
+			"@wp:theme",
+			"@wp:secure"
+		],
+		"post-install-cmd": [
+			"@wp:postInstall"
+		],
+		"post-update-cmd": [
+			"@wp:postInstall"
+		],
+		"phpcs": [
+			"vendor/bin/phpcsx --standard=JustcodedWordpress"
+		]
 	}
 }
