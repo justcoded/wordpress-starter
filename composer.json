@@ -79,13 +79,10 @@
 		"wordpress-install-dir": "cms",
 		"installer-paths": {
 			"wp-content/mu-plugins/{$name}/": [
-				"type:wordpress-muplugin"
-			],
-			"wp-content/plugins/{$name}/": [
-				"type:wordpress-plugin"
-			],
-			"wp-content/themes/{$name}/": [
-				"type:wordpress-theme"
+				"type:wordpress-muplugin",
+        "justcoded/just-theme-framework",
+        "wpackagist-plugin/titan-framework",
+        "wpackagist-plugin/just-responsive-images"
 			]
 		}
 	},
