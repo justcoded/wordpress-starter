@@ -1,102 +1,95 @@
 {
-	"name": "justcoded/wordpress-starter",
-	"type": "project",
-	"license": "MIT",
-	"description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
-	"authors": [
-		{
-			"name": "Alex Prokopenko",
-			"email": "aprokopenko@justcoded.com",
-			"homepage": "https://github.com/justcoded"
-		}
-	],
-	"keywords": [
-		"starter kit",
-		"justcoded",
-		"wordpress",
-		"stack",
-		"composer",
-		"wp"
-	],
-	"support": {
-		"issues": "https://github.com/justcoded/wordpress-starter/issues"
-	},
-	"config": {
-		"preferred-install": "dist"
-	},
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "https://wpackagist.org"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/justcoded/phpcodesniffer.git"
-		}
-	],
-	"require": {
-		"php": ">=7.0",
-		"composer/installers": "^1.4",
-		"vlucas/phpdotenv": "^2.0.1",
-
-		"johnpbloch/wordpress": "4.9",
-		"justcoded/wordpress-composer-scripts": "~1.1",
-
-		"wpackagist-theme/twentyseventeen": "*",
-		"wpackagist-plugin/wordpress-importer": "*",
-		"wpackagist-plugin/wp-mail-smtp": "*",
-		"wpackagist-plugin/regenerate-thumbnails": "*",
-		"wpackagist-plugin/duplicate-post": "*",
-
+  "name": "justcoded/wordpress-starter",
+  "type": "project",
+  "license": "MIT",
+  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
+  "authors": [
+    {
+      "name": "Alex Prokopenko",
+      "email": "aprokopenko@justcoded.com",
+      "homepage": "https://github.com/justcoded"
+    }
+  ],
+  "keywords": [
+    "starter kit",
+    "justcoded",
+    "wordpress",
+    "stack",
+    "composer",
+    "wp"
+  ],
+  "support": {
+    "issues": "https://github.com/justcoded/wordpress-starter/issues"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/justcoded/phpcodesniffer.git"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "composer/installers": "^1.4",
+    "vlucas/phpdotenv": "^2.0.1",
+    "johnpbloch/wordpress": "4.9",
+    "justcoded/wordpress-composer-scripts": "~1.1",
+    "wpackagist-theme/twentyseventeen": "*",
+    "wpackagist-plugin/wordpress-importer": "*",
+    "wpackagist-plugin/wp-mail-smtp": "*",
+    "wpackagist-plugin/regenerate-thumbnails": "*",
+    "wpackagist-plugin/duplicate-post": "*",
     "justcoded/wordpress-theme-framework": "~2.0",
     "justcoded/wordpress-theme-boilerplate": "~1.0",
     "wpackagist-plugin/titan-framework": "*",
-
-		"wpackagist-plugin/just-custom-fields": "*",
-		"wpackagist-plugin/just-responsive-images": "*",
-		"wpackagist-plugin/just-tinymce-styles": "*",
-		"wpackagist-plugin/mce-table-buttons": "*",
-
-		"wpackagist-plugin/add-to-any": "*",
-		"wpackagist-plugin/contact-form-7": "*",
-
-		"wpackagist-plugin/wordpress-seo": "*",
-		"wpackagist-plugin/seo-optimized-images": "*",
-		"wpackagist-plugin/autoptimize": "*"
-	},
-	"require-dev": {
-		"justcoded/phpcodesniffer": "dev-master"
-	},
-	"extra": {
-		"wordpress-install-dir": "cms",
-		"installer-paths": {
-			"wp-content/mu-plugins/{$name}/": [
-				"type:wordpress-muplugin",
+    "wpackagist-plugin/just-custom-fields": "*",
+    "wpackagist-plugin/just-responsive-images": "*",
+    "wpackagist-plugin/just-tinymce-styles": "*",
+    "wpackagist-plugin/mce-table-buttons": "*",
+    "wpackagist-plugin/add-to-any": "*",
+    "wpackagist-plugin/contact-form-7": "*",
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/seo-optimized-images": "*",
+    "wpackagist-plugin/autoptimize": "*"
+  },
+  "require-dev": {
+    "justcoded/phpcodesniffer": "dev-master"
+  },
+  "extra": {
+    "wordpress-install-dir": "cms",
+    "installer-paths": {
+      "wp-content/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
         "justcoded/wordpress-theme-framework",
         "wpackagist-plugin/titan-framework",
         "wpackagist-plugin/just-responsive-images"
-			]
-		}
-	},
-	"scripts": {
-		"wp:postInstall": "JustCoded\\WP\\Composer\\Environment::post_install",
-		"wp:dbPrefix": "JustCoded\\WP\\Composer\\Environment::wpdb_prefix",
-		"wp:salts" :  "JustCoded\\WP\\Composer\\Environment::salts",
-		"wp:theme" : "JustCoded\\WP\\Composer\\Boilerplates::theme",
-
-		"post-create-project-cmd": [
-			"@wp:postInstall",
-			"@wp:dbPrefix",
-			"@wp:salts"
-		],
-		"post-install-cmd": [
-			"@wp:postInstall"
-		],
-		"post-update-cmd": [
-			"@wp:postInstall"
-		],
-		"phpcs": [
-			"vendor/bin/phpcsx --standard=JustcodedWordpress"
-		]
-	}
+      ]
+    }
+  },
+  "scripts": {
+    "wp:postInstall": "JustCoded\\WP\\Composer\\Environment::post_install",
+    "wp:dbPrefix": "JustCoded\\WP\\Composer\\Environment::wpdb_prefix",
+    "wp:salts": "JustCoded\\WP\\Composer\\Environment::salts",
+    "wp:theme": "JustCoded\\WP\\Composer\\Boilerplates::theme",
+    "post-create-project-cmd": [
+      "@wp:postInstall",
+      "@wp:dbPrefix",
+      "@wp:salts"
+    ],
+    "post-install-cmd": [
+      "@wp:postInstall"
+    ],
+    "post-update-cmd": [
+      "@wp:postInstall"
+    ],
+    "phpcs": [
+      "vendor/bin/phpcsx --standard=JustcodedWordpress"
+    ]
+  }
 }
