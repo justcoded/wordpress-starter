@@ -38,13 +38,9 @@ rapidly creating projects with modern development tools, easier configuration, a
   * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/cms)
   * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
 
-  If you want to automatically generate the security keys (assuming you have wp-cli installed locally) you can use the very handy [wp-cli-dotenv-command][wp-cli-dotenv]:
+  Salts can be generated automatically using custom composer command:
 
-      wp package install aaemnnosttv/wp-cli-dotenv-command
-
-      wp dotenv salts regenerate
-
-  Or, we will add standalone solution in future releases.
+      composer wp:salts
 
 3. Add theme(s) in `wp-content/themes` as you would for a normal WordPress site.
 
