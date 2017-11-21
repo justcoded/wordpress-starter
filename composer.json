@@ -32,15 +32,7 @@
 		{
 			"type": "vcs",
 			"url": "https://github.com/justcoded/phpcodesniffer.git"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/justcoded/wordpress-composer-scripts.git"
-		},
-    {
-      "type": "vcs",
-      "url": "https://github.com/justcoded/wordpress-theme-boilerplate.git"
-    }
+		}
 	],
 	"require": {
 		"php": ">=7.0",
@@ -48,7 +40,7 @@
 		"vlucas/phpdotenv": "^2.0.1",
 
 		"johnpbloch/wordpress": "4.9",
-		"justcoded/wordpress-composer-scripts": "dev-develop",
+		"justcoded/wordpress-composer-scripts": "~1.1",
 
 		"wpackagist-theme/twentyseventeen": "*",
 		"wpackagist-plugin/wordpress-importer": "*",
@@ -56,8 +48,8 @@
 		"wpackagist-plugin/regenerate-thumbnails": "*",
 		"wpackagist-plugin/duplicate-post": "*",
 
-    "justcoded/just-theme-framework": "dev-develop",
-    "justcoded/wordpress-theme-boilerplate": "dev-develop",
+    "justcoded/wordpress-theme-framework": "~2.0",
+    "justcoded/wordpress-theme-boilerplate": "~1.0",
     "wpackagist-plugin/titan-framework": "*",
 
 		"wpackagist-plugin/just-custom-fields": "*",
@@ -80,7 +72,7 @@
 		"installer-paths": {
 			"wp-content/mu-plugins/{$name}/": [
 				"type:wordpress-muplugin",
-        "justcoded/just-theme-framework",
+        "justcoded/wordpress-theme-framework",
         "wpackagist-plugin/titan-framework",
         "wpackagist-plugin/just-responsive-images"
 			]
