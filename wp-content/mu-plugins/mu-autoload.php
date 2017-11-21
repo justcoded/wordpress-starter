@@ -1,11 +1,11 @@
 <?php
 
-if ( ! $h = opendir(WPMU_PLUGIN_DIR) ) {
+if ( ( defined( 'WP_INSTALLING' ) && WP_INSTALLING ) || ! $h = opendir( WPMU_PLUGIN_DIR ) ) {
 	return;
 }
 
 while ( false !== ( $entry = readdir( $h ) ) ) {
-	if ( '.' === $entry || '..' === $entry || ! is_dir(WPMU_PLUGIN_DIR . '/' . $entry) ) {
+	if ( '.' === $entry || '..' === $entry || ! is_dir( WPMU_PLUGIN_DIR . '/' . $entry ) ) {
 		continue;
 	}
 
