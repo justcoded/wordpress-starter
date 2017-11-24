@@ -46,7 +46,7 @@
     "wpackagist-plugin/regenerate-thumbnails": "*",
     "wpackagist-plugin/duplicate-post": "*",
     "justcoded/wordpress-theme-framework": "~2.0",
-    "justcoded/wordpress-theme-boilerplate": "~1.0",
+    "justcoded/wordpress-theme-boilerplate": "dev-develop",
     "wpackagist-plugin/titan-framework": "*",
     "wpackagist-plugin/just-custom-fields": "*",
     "wpackagist-plugin/just-responsive-images": "*",
