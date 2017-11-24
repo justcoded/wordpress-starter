@@ -76,6 +76,7 @@
     "wp:postInstall": "JustCoded\\WP\\Composer\\Environment::post_install",
     "wp:dbPrefix": "JustCoded\\WP\\Composer\\Environment::wpdb_prefix",
     "wp:salts": "JustCoded\\WP\\Composer\\Environment::salts",
+    "wp:htaccess_update": "JustCoded\\WP\\Composer\\Environment::htaccess_update",
     "wp:theme": "JustCoded\\WP\\Composer\\Boilerplates::theme",
     "wp:secure": "JustCoded\\WP\\Composer\\Boilerplates::secure",
     "post-create-project-cmd": [
