@@ -40,6 +40,13 @@ rapidly creating projects with modern development tools, easier configuration, a
 
 4. That's it!
 
+## New composer commands
+
+* `composer wp:theme` generate new theme based on our [Theme Boilerplate](https://github.com/justcoded/wordpress-theme-boilerplate)
+* `composer wp:secure` generate new HTTP password for wp-admin folder
+* `composer wp:dbPrefix` generate secure DB prefix inside .env/.env.example files. (executed automatically after installation)
+* `composer wp:salts` generating new secure WordPress salts
+
 ## Security
 
 ### Salts
@@ -66,13 +73,6 @@ We recommend to set one more level of security - add additional HTTP password pr
 You can do this with our composer script:
 
 `composer wp:secure -u "login" -p "password"` 
-
-## New composer commands
-
-* `composer wp:theme` generate new theme based on our [Theme Boilerplate](https://github.com/justcoded/wordpress-theme-boilerplate)
-* `composer wp:secure` generate new HTTP password for wp-admin folder
-* `composer wp:dbPrefix` generate secure DB prefix inside .env/.env.example files. (executed automatically after installation)
-* `composer wp:salts` generating new secure WordPress salts
 
 ## Contributing
 
