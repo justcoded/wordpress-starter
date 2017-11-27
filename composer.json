@@ -47,7 +47,7 @@
     "wpackagist-plugin/regenerate-thumbnails": "*",
     "wpackagist-plugin/duplicate-post": "*",
 
-    "justcoded/wordpress-theme-framework": "~2.0",
+    "justcoded/wordpress-theme-framework": "dev-develop",
     "justcoded/wordpress-theme-boilerplate": "dev-develop",
     "wpackagist-plugin/titan-framework": "*",
 
@@ -77,6 +77,7 @@
   },
   "scripts": {
     "wp:postInstall": "JustCoded\\WP\\Composer\\Environment::post_install",
+    "wp:deployReadme": "JustCoded\\WP\\Composer\\Environment::deployment_readme",
     "wp:dbPrefix": "JustCoded\\WP\\Composer\\Environment::wpdb_prefix",
     "wp:salts": "JustCoded\\WP\\Composer\\Environment::salts",
     "wp:secure": "JustCoded\\WP\\Composer\\Security::admin_http_auth",
@@ -85,7 +86,8 @@
     "post-create-project-cmd": [
       "@wp:postInstall",
       "@wp:dbPrefix",
-      "@wp:salts"
+      "@wp:salts",
+      "@wp:deployReadme"
     ],
     "post-install-cmd": [
       "@wp:postInstall"
