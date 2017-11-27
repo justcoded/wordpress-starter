@@ -90,13 +90,15 @@
       "@wp:deployReadme"
     ],
     "post-install-cmd": [
-      "@wp:postInstall"
+      "@wp:postInstall",
+      "phpcsx-init"
     ],
     "post-update-cmd": [
-      "@wp:postInstall"
+      "@wp:postInstall",
+      "phpcsx-init"
     ],
     "phpcs": [
-      "vendor/bin/phpcsx --standard=JustcodedWordpress"
+      "vendor/bin/phpcs --standard=JustcodedWordpress"
     ]
   }
 }
