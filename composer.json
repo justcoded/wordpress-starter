@@ -39,7 +39,7 @@
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.9",
-    "justcoded/wordpress-composer-scripts": "dev-develop",
+    "justcoded/wordpress-composer-scripts": "~1.2",
     "wpackagist-theme/twentyseventeen": "*",
 
     "wpackagist-plugin/wordpress-importer": "*",
@@ -47,8 +47,8 @@
     "wpackagist-plugin/regenerate-thumbnails": "*",
     "wpackagist-plugin/duplicate-post": "*",
 
-    "justcoded/wordpress-theme-framework": "dev-develop",
-    "justcoded/wordpress-theme-boilerplate": "dev-develop",
+    "justcoded/wordpress-theme-framework": "^2.0.1",
+    "justcoded/wordpress-theme-boilerplate": "~1.0",
     "wpackagist-plugin/titan-framework": "*",
 
     "wpackagist-plugin/just-custom-fields": "*",
