@@ -39,15 +39,18 @@
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.9",
-    "justcoded/wordpress-composer-scripts": "~1.1",
+    "justcoded/wordpress-composer-scripts": "~1.2",
     "wpackagist-theme/twentyseventeen": "*",
+
     "wpackagist-plugin/wordpress-importer": "*",
     "wpackagist-plugin/wp-mail-smtp": "*",
     "wpackagist-plugin/regenerate-thumbnails": "*",
     "wpackagist-plugin/duplicate-post": "*",
-    "justcoded/wordpress-theme-framework": "~2.0",
+
+    "justcoded/wordpress-theme-framework": "^2.0.1",
     "justcoded/wordpress-theme-boilerplate": "~1.0",
     "wpackagist-plugin/titan-framework": "*",
+
     "wpackagist-plugin/just-custom-fields": "*",
     "wpackagist-plugin/just-responsive-images": "*",
     "wpackagist-plugin/just-tinymce-styles": "*",
@@ -74,22 +77,28 @@
   },
   "scripts": {
     "wp:postInstall": "JustCoded\\WP\\Composer\\Environment::post_install",
+    "wp:deployReadme": "JustCoded\\WP\\Composer\\Environment::deployment_readme",
     "wp:dbPrefix": "JustCoded\\WP\\Composer\\Environment::wpdb_prefix",
     "wp:salts": "JustCoded\\WP\\Composer\\Environment::salts",
+    "wp:secure": "JustCoded\\WP\\Composer\\Security::admin_http_auth",
     "wp:theme": "JustCoded\\WP\\Composer\\Boilerplates::theme",
+
     "post-create-project-cmd": [
       "@wp:postInstall",
       "@wp:dbPrefix",
-      "@wp:salts"
+      "@wp:salts",
+      "@wp:deployReadme"
     ],
     "post-install-cmd": [
-      "@wp:postInstall"
+      "@wp:postInstall",
+      "phpcsx-init"
     ],
     "post-update-cmd": [
-      "@wp:postInstall"
+      "@wp:postInstall",
+      "phpcsx-init"
     ],
     "phpcs": [
-      "vendor/bin/phpcsx --standard=JustcodedWordpress"
+      "vendor/bin/phpcs --standard=JustcodedWordpress"
     ]
   }
 }
