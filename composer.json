@@ -24,21 +24,11 @@
   "config": {
     "preferred-install": "dist"
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/justcoded/phpcodesniffer.git"
-    }
-  ],
   "require": {
     "php": ">=7.0",
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.9",
+    "johnpbloch/wordpress": "4.9.1",
     "justcoded/wordpress-composer-scripts": "~1.2",
     "wpackagist-theme/twentyseventeen": "*",
 
@@ -75,6 +65,16 @@
       ]
     }
   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/justcoded/phpcodesniffer.git"
+    }
+  ],
   "scripts": {
     "wp:postInstall": "JustCoded\\WP\\Composer\\Environment::post_install",
     "wp:deployReadme": "JustCoded\\WP\\Composer\\Environment::deployment_readme",
