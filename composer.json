@@ -38,7 +38,7 @@
     "wpackagist-plugin/duplicate-post": "*",
 
     "justcoded/wordpress-theme-framework": "^2.1.0",
-    "justcoded/wordpress-theme-boilerplate": "~1.1.0",
+    "justcoded/wordpress-theme-boilerplate": "^1.1.0",
     "wpackagist-plugin/titan-framework": "*",
 
     "wpackagist-plugin/just-custom-fields": "*",
