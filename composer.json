@@ -21,8 +21,10 @@
   "support": {
     "issues": "https://github.com/justcoded/wordpress-starter/issues"
   },
+  "prefer-stable": true,
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "optimize-autoloader": true
   },
   "require": {
     "php": ">=7.0",
