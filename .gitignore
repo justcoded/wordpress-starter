@@ -5,7 +5,7 @@
 .idea
 
 # composer
-composer.lock
+#composer.lock
 composer.phar
 /vendor/
 /cms/
@@ -33,3 +33,17 @@ node_modules
 /.env
 /wp-content/themes/twentyseventeen/
 /wp-content/uploads/*
+
+# trusted plugins
+/wp-content/mu-plugins/just-responsive-images/
+/wp-content/mu-plugins/wordpress-theme-framework/
+
+/wp-content/plugins/just-custom-fields/
+/wp-content/plugins/just-tinymce-styles/
+/wp-content/plugins/wordpress-importer/
+/wp-content/plugins/duplicate-post/
+/wp-content/plugins/regenerate-thumbnails/
+/wp-content/plugins/seo-optimized-images/
+/wp-content/plugins/wordpress-seo/
+/wp-content/plugins/contact-form-7/
+/wp-content/plugins/wp-mail-smtp/

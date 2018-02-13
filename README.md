@@ -14,7 +14,7 @@ development tools, easier configuration, improved folder structure and latest se
 The organization of skeleton is similar to putting WordPress core files in its own subdirectory, 
 `wp-content` stays the same. 
 
-![File structure](https://github.com/justcoded/wordpress-starter/wiki/assets/20171201-wp-starter-structure.png)
+![File structure](https://github.com/justcoded/wordpress-starter/wiki/assets/20171201-wp-starter-structure1.png)
 
 ## Dependency management with Composer
 
