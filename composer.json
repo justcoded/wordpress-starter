@@ -30,7 +30,7 @@
     "php": ">=7.0",
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.9.1",
+    "johnpbloch/wordpress": "^4.9.0",
     "justcoded/wordpress-composer-scripts": "~1.2",
     "wpackagist-theme/twentyseventeen": "*",
 
