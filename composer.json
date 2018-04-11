@@ -84,7 +84,7 @@
     "wp:salts": "JustCoded\\WP\\Composer\\Environment::salts",
     "wp:secure": "JustCoded\\WP\\Composer\\Security::admin_http_auth",
     "wp:theme": "JustCoded\\WP\\Composer\\Boilerplates::theme",
-    "wp:dbUpdate": "JustCoded\\WP\\Composer\\DB_Replace::host_replace",
+    "wp:dbUpdate": "JustCoded\\WP\\Composer\\DB_Replace::db_replace",
 
     "post-create-project-cmd": [
       "@wp:postInstall",
