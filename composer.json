@@ -51,7 +51,8 @@
     "wpackagist-plugin/contact-form-7": "*",
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/seo-optimized-images": "*",
-    "wpackagist-plugin/autoptimize": "*"
+    "wpackagist-plugin/autoptimize": "*",
+    "wpackagist-plugin/wp-super-cache": "*"
   },
   "require-dev": {
     "justcoded/phpcodesniffer": "dev-master"
