@@ -45,6 +45,7 @@
 
     "wpackagist-plugin/just-custom-fields": "*",
     "wpackagist-plugin/just-responsive-images": "*",
+    "wpackagist-plugin/just-image-optimizer": "*",
     "wpackagist-plugin/just-tinymce-styles": "*",
     "wpackagist-plugin/mce-table-buttons": "*",
     "wpackagist-plugin/add-to-any": "*",
