@@ -45,13 +45,15 @@
 
     "wpackagist-plugin/just-custom-fields": "*",
     "wpackagist-plugin/just-responsive-images": "*",
+    "wpackagist-plugin/just-image-optimizer": "*",
     "wpackagist-plugin/just-tinymce-styles": "*",
     "wpackagist-plugin/mce-table-buttons": "*",
     "wpackagist-plugin/add-to-any": "*",
     "wpackagist-plugin/contact-form-7": "*",
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/seo-optimized-images": "*",
-    "wpackagist-plugin/autoptimize": "*"
+    "wpackagist-plugin/autoptimize": "*",
+    "wpackagist-plugin/wp-super-cache": "*"
   },
   "require-dev": {
     "justcoded/phpcodesniffer": "dev-master"
