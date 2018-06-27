@@ -34,7 +34,6 @@
     "justcoded/wordpress-composer-scripts": "~1.2",
     "wpackagist-theme/twentyseventeen": "*",
 
-    "wpackagist-plugin/wordpress-importer": "*",
     "wpackagist-plugin/wp-mail-smtp": "*",
     "wpackagist-plugin/regenerate-thumbnails": "*",
     "wpackagist-plugin/duplicate-post": "*",
@@ -56,7 +55,9 @@
     "wpackagist-plugin/wp-super-cache": "*"
   },
   "require-dev": {
-    "justcoded/phpcodesniffer": "dev-master"
+    "justcoded/phpcodesniffer": "dev-master",
+    "wpackagist-plugin/wordpress-importer": "*",
+    "wpackagist-plugin/fakerpress": "~0.4.10"
   },
   "extra": {
     "wordpress-install-dir": "cms",
