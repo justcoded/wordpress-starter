@@ -38,11 +38,10 @@
     "wpackagist-plugin/regenerate-thumbnails": "*",
     "wpackagist-plugin/duplicate-post": "*",
 
-    "justcoded/wordpress-theme-framework": "^2.1.0",
-    "justcoded/wordpress-theme-boilerplate": "^1.1.0",
-    "wpackagist-plugin/titan-framework": "*",
+    "justcoded/wordpress-theme-framework": "^3.0",
+    "justcoded/wordpress-theme-boilerplate": "^3.0",
+    "acf/advanced-custom-fields-pro": "dev-master",
 
-    "wpackagist-plugin/just-custom-fields": "*",
     "wpackagist-plugin/just-responsive-images": "*",
     "wpackagist-plugin/just-image-optimizer": "*",
     "wpackagist-plugin/just-tinymce-styles": "*",
@@ -65,7 +64,7 @@
       "wp-content/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
         "justcoded/wordpress-theme-framework",
-        "wpackagist-plugin/titan-framework",
+        "acf/advanced-custom-fields-pro",
         "wpackagist-plugin/just-responsive-images"
       ]
     }
@@ -78,6 +77,18 @@
     {
       "type": "vcs",
       "url": "https://github.com/justcoded/phpcodesniffer.git"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "acf/advanced-custom-fields-pro",
+        "type": "wordpress-plugin",
+        "version": "dev-master",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.6.zip"
+        }
+      }
     }
   ],
   "scripts": {
