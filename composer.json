@@ -21,38 +21,42 @@
   "support": {
     "issues": "https://github.com/justcoded/wordpress-starter/issues"
   },
+  "prefer-stable": true,
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "optimize-autoloader": true
   },
   "require": {
     "php": ">=7.0",
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.9.1",
+    "johnpbloch/wordpress": "^4.9.0",
     "justcoded/wordpress-composer-scripts": "~1.2",
     "wpackagist-theme/twentyseventeen": "*",
 
-    "wpackagist-plugin/wordpress-importer": "*",
     "wpackagist-plugin/wp-mail-smtp": "*",
     "wpackagist-plugin/regenerate-thumbnails": "*",
     "wpackagist-plugin/duplicate-post": "*",
-
+    
     "justcoded/wordpress-theme-framework": "dev-develop",
     "justcoded/wordpress-theme-boilerplate": "dev-develop",
-    "wpackagist-plugin/titan-framework": "*",
+    "acf/advanced-custom-fields-pro": "dev-master",
 
-    "wpackagist-plugin/just-custom-fields": "*",
     "wpackagist-plugin/just-responsive-images": "*",
+    "wpackagist-plugin/just-image-optimizer": "*",
     "wpackagist-plugin/just-tinymce-styles": "*",
     "wpackagist-plugin/mce-table-buttons": "*",
     "wpackagist-plugin/add-to-any": "*",
     "wpackagist-plugin/contact-form-7": "*",
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/seo-optimized-images": "*",
-    "wpackagist-plugin/autoptimize": "*"
+    "wpackagist-plugin/autoptimize": "*",
+    "wpackagist-plugin/wp-super-cache": "*"
   },
   "require-dev": {
-    "justcoded/phpcodesniffer": "dev-master"
+    "justcoded/phpcodesniffer": "dev-master",
+    "wpackagist-plugin/wordpress-importer": "*",
+    "wpackagist-plugin/fakerpress": "~0.4.10"
   },
   "extra": {
     "wordpress-install-dir": "cms",
@@ -60,7 +64,7 @@
       "wp-content/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
         "justcoded/wordpress-theme-framework",
-        "wpackagist-plugin/titan-framework",
+        "acf/advanced-custom-fields-pro",
         "wpackagist-plugin/just-responsive-images"
       ]
     }
@@ -73,6 +77,18 @@
     {
       "type": "vcs",
       "url": "https://github.com/justcoded/phpcodesniffer.git"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "acf/advanced-custom-fields-pro",
+        "type": "wordpress-plugin",
+        "version": "dev-master",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.6.zip"
+        }
+      }
     }
   ],
   "scripts": {
