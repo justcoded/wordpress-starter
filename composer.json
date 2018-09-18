@@ -35,7 +35,6 @@
     "wpackagist-theme/twentyseventeen": "*",
 
     "wpackagist-plugin/wp-mail-smtp": "*",
-    "wpackagist-plugin/regenerate-thumbnails": "*",
     "wpackagist-plugin/duplicate-post": "*",
 
     "justcoded/wordpress-theme-framework": "^3.0",
