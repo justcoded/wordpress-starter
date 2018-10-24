@@ -43,6 +43,22 @@ AddType image/x-icon .ico
 		order allow,deny
 		deny from all
 	</files>
+	<files composer.json>
+        order allow,deny
+        deny from all
+    </files>
+    <files license.txt>
+		order allow,deny
+		deny from all
+	</files>
+	<files readme.html>
+		order allow,deny
+		deny from all
+	</files>
+	<files sitemap.xml.gz>
+		order allow,deny
+		deny from all
+	</files>
 </IfModule>
 
 # BEGIN WordPress
