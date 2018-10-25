@@ -66,6 +66,8 @@ AddType image/x-icon .ico
 RewriteEngine On
 RewriteBase /
 
+RewriteRule (^|/)vendor(/|$) - [F]
+
 RewriteRule ^(^\.|\/\.) /index.php [QSA,L]
 
 RewriteRule ^index\.php$ - [L]
