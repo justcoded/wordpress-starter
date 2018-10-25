@@ -55,10 +55,6 @@ AddType image/x-icon .ico
 		order allow,deny
 		deny from all
 	</files>
-	<files sitemap.xml.gz>
-		order allow,deny
-		deny from all
-	</files>
 </IfModule>
 
 # BEGIN WordPress
