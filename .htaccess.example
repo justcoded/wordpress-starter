@@ -33,6 +33,7 @@ AddType image/x-icon .ico
 </IfModule>
 
 #Security
+Options All -Indexes
 <FilesMatch "^(readme.*|license.*|composer.*|wp-config.php|README.*)$">
         order allow,deny
         deny from all
