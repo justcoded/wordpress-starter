@@ -33,23 +33,18 @@ AddType image/x-icon .ico
 </IfModule>
 
 #Security
-<IfModule mod_rewrite.c>
-	Options All -Indexes
-	<Files .htaccess>
-		order allow,deny
-		allow from all
-	</Files>
-	<files wp-config.php>
-		order allow,deny
-		deny from all
-	</files>
-</IfModule>
+Options All -Indexes
+<FilesMatch "^(readme.*|license.*|composer.*|wp-config.php|README.*)$">
+        order allow,deny
+        deny from all
+</FilesMatch>
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
 
+RewriteRule ^vendor(/|$) - [F]
 RewriteRule ^(^\.|\/\.) /index.php [QSA,L]
 
 RewriteRule ^index\.php$ - [L]
