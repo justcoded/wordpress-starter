@@ -13,7 +13,7 @@ if ( ! function_exists( 'dotenv' ) ) {
 		static $dotenv;
 
 		if ( ! is_null( $config ) ) {
-			$dotenv = new Dotenv\Dotenv( $config );
+			$dotenv = Dotenv\Dotenv::create( $config );
 		}
 
 		if ( ! $dotenv ) {
