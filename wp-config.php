@@ -66,6 +66,14 @@ define( 'AUTOMATIC_UPDATER_DISABLED', true );
 define( 'DISABLE_WP_CRON', env( 'DISABLE_WP_CRON', false ) );
 
 /**
+ * Mail Settings
+ */
+define( 'JC_MAIL_HOST', env( 'MAIL_HOST', 'smtp.mailtrap.io' ) );
+define( 'JC_MAIL_PORT', env( 'MAIL_PORT', '2525' ) );
+define( 'JC_MAIL_USERNAME', env( 'MAIL_USERNAME' ) );
+define( 'JC_MAIL_PASSWORD', env( 'MAIL_PASSWORD' ) );
+
+/**
  * Sets up WordPress vars and included files.
  */
 require_once( ABSPATH . 'wp-settings.php' );
