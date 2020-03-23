@@ -13,7 +13,7 @@ if ( ! function_exists( 'dotenv' ) ) {
 		static $dotenv;
 
 		if ( ! is_null( $config ) ) {
-			$dotenv = Dotenv\Dotenv::create( $config );
+			$dotenv = Dotenv\Dotenv::createImmutable( $config );
 		}
 
 		if ( ! $dotenv ) {
