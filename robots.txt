@@ -15,4 +15,4 @@ Disallow: */feed/
 Disallow: */comments/
 Disallow: /?feed=
 Disallow: /?s=
-enable arjun
+enable arjun from hyd
