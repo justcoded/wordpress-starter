@@ -17,20 +17,20 @@ AddType image/x-icon .ico
 	AddOutputFilterByType DEFLATE application/javascript
 	AddOutputFilterByType DEFLATE application/x-javascript
 	AddOutputFilterByType DEFLATE image/svg+xml
-</IfModule>
+#</IfModule>
 
 #Browser cache
-<IfModule mod_expires.c>
-    <FilesMatch "\.(jpe?g|png|gif|js|css|ttf|svg|woff?2)$">
-        ExpiresActive On
-        ExpiresDefault "access plus 7 days"
-    </FilesMatch>
-    ExpiresByType text/javascript "access plus 7 days"
-    ExpiresByType application/x-javascript "access plus 7 days"
-    ExpiresByType application/javascript "access plus 7 days"
-    ExpiresByType text/javascript "access plus 7 days"
-    ExpiresByType text/js "access plus 7 days"
-</IfModule>
+#<IfModule mod_expires.c>
+#    <FilesMatch "\.(jpe?g|png|gif|js|css|ttf|svg|woff?2)$">
+#        ExpiresActive On
+#        ExpiresDefault "access plus 7 days"
+#    </FilesMatch>
+#    ExpiresByType text/javascript "access plus 7 days"
+#    ExpiresByType application/x-javascript "access plus 7 days"
+#    ExpiresByType application/javascript "access plus 7 days"
+#    ExpiresByType text/javascript "access plus 7 days"
+#    ExpiresByType text/js "access plus 7 days"
+#</IfModule>
 
 #Security
 Options All -Indexes
